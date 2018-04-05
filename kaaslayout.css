@@ -1,0 +1,85 @@
+.grid-container{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 40px;
+
+  grid-template-areas: 
+        "key"
+        "speedo"
+        "oil"
+        "ad"
+        "foot"; 
+}
+
+
+.box1{
+  grid-area: key;
+} 
+
+.box2{
+  grid-area: oil;
+}
+
+.box3 {
+  grid-area: foot;
+}
+
+
+
+
+
+
+@media only screen and (min-width: 401px) and (max-width: 599px) {
+  .grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    height: 600px;
+    grid-gap: 10px;
+
+    grid-template-areas: 
+          "key key"
+          "oil  oil"
+          "speedo  ad"
+          "foot  foot"; 
+  }
+}
+
+
+@media only screen and (min-width: 600px) and (max-width: 959px){
+  .grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    height: 600px;
+    grid-gap: 10px;
+
+    grid-template-areas: 
+          "key key key"
+          "oil oil oil"
+          "oil oil ad"
+          "foot foot foot"; 
+  }
+}
+
+
+@media only screen and (min-width: 600px) {
+  .grid-container{
+    max-width: 1080px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    height: 600px;
+    grid-gap: 10px;
+
+    grid-template-areas: 
+          "speedo      key     key key key    "
+          "oil     oil   oil     oil  oil"
+          " .       .         oil      oil  oil"
+          "highlight highlight highlight ad    ad"
+          "foot      foot      foot      foot  foot"; 
+  }
+
+  
+}
